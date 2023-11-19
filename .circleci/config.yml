@@ -1,23 +1,16 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@2.2.0
+  cypress: cypress-io/cypress@3.2.0
+executor: cypress/default
 workflows:
   build:
     jobs:
-      # "cypress" is the name of the imported orb
-      - cypress/install:
-          name: Install everything
-
       # "run" is the name of the job defined in Cypress orb
       - cypress/run:
-          requires:
-            - Install everything
           name: Run Cypress tests
-          start: npm start
-          wait-on: 'http://localhost:8080'
+          start-command: npm start
+          cypress-command: 'npx wait-on@latest http://localhost:8080'
           no-workspace: true
-          record: true
           tags: circleci
-          parallel: true
           parallelism: 3
           group: 'All tests'
