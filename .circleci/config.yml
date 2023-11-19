@@ -9,5 +9,5 @@ workflows:
       - cypress/run:
           name: Run Cypress tests
           start-command: npm start
-          cypress-command: 'npx wait-on@latest http://localhost:8080'
+          cypress-command: 'npx cypress run --parallel --group all tests'
           parallelism: 3
