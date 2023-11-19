@@ -9,5 +9,5 @@ workflows:
       - cypress/run:
           name: Run Cypress tests
           start-command: npm start
-          cypress-command: 'npx cypress run --parallel --group all tests'
+          cypress-command: 'npx cypress run'
           parallelism: 3
