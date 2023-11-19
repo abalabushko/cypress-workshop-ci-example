@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@3.2.0
+  cypress: cypress-io/cypress@3
 executor: cypress/default
 workflows:
   build:
@@ -10,7 +10,4 @@ workflows:
           name: Run Cypress tests
           start-command: npm start
           cypress-command: 'npx wait-on@latest http://localhost:8080'
-          no-workspace: true
-          tags: circleci
           parallelism: 3
-          group: 'All tests'
