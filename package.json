@@ -28,7 +28,7 @@
     "@11ty/eleventy": "^2.0.0",
     "cypress": "13.6.4",
     "netlify-plugin-cypress": "^2.2.0",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "start-server-and-test": "^2.0.0"
   }
 }
