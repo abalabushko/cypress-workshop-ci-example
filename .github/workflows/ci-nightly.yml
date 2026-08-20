@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         
       - name: Cypress nightly tests 🌃
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v7.4.3
         with:
           record: true
           parallel: true
